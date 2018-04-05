@@ -11,13 +11,13 @@ To run, navigate to the directory where you have saved the zero to deep learning
 ### Windows:
 
 ```
-docker run -v "%cd%":/ztdlbook -it iainsproat/ztdlbook:latest
+docker run -v "%cd%":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
 ### Linux/Mac:
 
 ```
-docker run -v PWD:/ztdlbook -it iainsproat/ztdlbook:latest
+docker run -v "PWD":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
 The image uses [tmux](https://github.com/tmux/tmux/wiki) terminal and has [vim](https://www.vim.org/) editor installed.
