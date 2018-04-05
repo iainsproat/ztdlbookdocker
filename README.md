@@ -2,7 +2,7 @@
 
 Unofficial docker image for running the exercises in the [Zero To Deep learning book](https://www.zerotodeeplearning.com/)
 
-The built docker image can be found on Dockerhub.
+The built docker image can be found on Dockerhub at [iainsproat/ztdlbook](https://hub.docker.com/r/iainsproat/ztdlbook/).
 
 ## Running Jupyter Notebooks
 
