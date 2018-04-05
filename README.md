@@ -41,14 +41,17 @@ docker run -v "$PWD":/ztdlbook -it iainsproat/ztdlbook:latest /usr/bin/tmux
 Once the container is running, type:
 
 ```
-source activate ztdlbook
+source activate ztdlbook && cd /ztdlbook
 ```
 
 The image uses [tmux](https://github.com/tmux/tmux/wiki) terminal and has [vim](https://www.vim.org/) editor installed.
 
 ## Building
 
-If you wish to build the image yourself, clone this repository then run:
+If you wish to build the image yourself:
+1. clone this repository
+1. navigate into the cloned directory
+1. run:
 
 ```
 docker build -t iainsproat/ztdlbook
