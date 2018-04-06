@@ -11,13 +11,13 @@ To run, navigate to the directory where you have saved the zero to deep learning
 ### Windows:
 
 ```
-docker run -v "%cd%":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
+docker run -v "%cd%":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "source activate ztdlbook && jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
 ### Linux/Mac:
 
 ```
-docker run -v "$PWD":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
+docker run -v "$PWD":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "source activate ztdlbook && jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
 Then navigate in your browser to the url printed in your terminal (should be `localhost:8888`)
