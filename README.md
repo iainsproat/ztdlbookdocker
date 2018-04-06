@@ -20,7 +20,7 @@ docker run -v "%cd%":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/
 docker run -v "$PWD":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /bin/bash -c "source activate ztdlbook && jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root"
 ```
 
-Then navigate in your browser to the url printed in your terminal (should be `localhost:8888`)
+Then navigate in your browser (on the host machine) to the url printed in your terminal (should be `http://localhost:88888/?token=XXXX...etc.`)
 
 ## Using the Image as a development environment
 
@@ -45,6 +45,14 @@ source activate ztdlbook && cd /ztdlbook
 ```
 
 The image uses [tmux](https://github.com/tmux/tmux/wiki) terminal and has [vim](https://www.vim.org/) editor installed.
+
+You can also run notebook from within the interactive shell by running the following command:
+
+```
+jupyter notebook --notebook-dir=/ztdlbook --ip='*' --port=8888 --no-browser --allow-root
+```
+
+Then navigate in your browser (on the host machine) to the url printed in your terminal (should be `http://localhost:8888/?token=XXXX...etc.`)
 
 ## Building
 
