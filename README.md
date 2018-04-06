@@ -29,13 +29,13 @@ To run, navigate to the directory where you have saved the zero to deep learning
 ### Windows:
 
 ```
-docker run -v "%cd%":/ztdlbook -it iainsproat/ztdlbook:latest /usr/bin/tmux
+docker run -v "%cd%":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /usr/bin/tmux
 ```
 
 ### Linux/Mac:
 
 ```
-docker run -v "$PWD":/ztdlbook -it iainsproat/ztdlbook:latest /usr/bin/tmux
+docker run -v "$PWD":/ztdlbook -it -p 8888:8888 iainsproat/ztdlbook:latest /usr/bin/tmux
 ```
 
 Once the container is running, type:
